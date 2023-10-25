@@ -1,0 +1,91 @@
+{
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "eslint.workingDirectories": [],
+  
+    "editor.lineNumbers": "relative",
+  
+    "vim.leader": "<Space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+      // NAVIGATION
+      // switch b/w buffers
+      { "before": ["<S-h>"], "commands": [":bprevious"] },
+      { "before": ["<S-l"], "commands": [":bnext"] },
+  
+      //splits
+      { "before": ["leader", "v"], "commands": [":vsplit"] },
+      { "before": ["leader", "s"], "commands": [":split"] },
+  
+      // panes
+      {
+        "before": ["leader", "h"],
+        "commands": ["workbench.action.focusLeftGroup"]
+      },
+      {
+        "before": ["leader", "j"],
+        "commands": ["workbench.action.focusBelowGroup"]
+      },
+      {
+        "before": ["leader", "k"],
+        "commands": ["workbench.action.focusAboveGroup"]
+      },
+      {
+        "before": ["leader", "l"],
+        "commands": ["workbench.action.focusRightGroup"]
+      },
+  
+      // FILE TREE
+      {
+        "before": ["leader", "n", "e"],
+        "commands": ["workbench.explorer.fileView.focus"]
+      },
+  
+      // NICE TO HAVE
+      { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
+      { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+      { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+      {
+        "before": ["g", "h"],
+        "commands": ["editor.action.showDefinitionPreviewHover"]
+      }
+    ],
+    "vim.visualModeKeyBindings": [
+      // Stay in visual mode while indenting
+      { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+      { "before": [">"], "commands": ["editor.action.indentLines"] },
+      // Move selected lines while staying in visual mode
+      { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+      { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+      // toggle comment selection
+      { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    ],
+  
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["javascript"],
+    "git.openRepositoryInParentFolders": "never",
+  
+    "vim.useSystemClipboard": true,
+  
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "emmet.syntaxProfiles": {
+      "javascript": "jsx"
+    },
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.visible": false,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.confirmDragAndDrop": false
+  }
+  
